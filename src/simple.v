@@ -23,14 +23,14 @@ module simple(
 	always @ (*)
 		begin
 			case(a)
-				0: result =7b'00000000;
-				1: result =7b'00000001;
-				2: result =7b'00000011;
-				3: result =7b'00000111;
-				4: result =7b'00001111;
-				5: result =7b'00011111;
-				6: result =7b'00111111;
-				7: result =7b'11111111;
+				0: result =7'b00000000;
+				1: result =7'b00000001;
+				2: result =7'b00000011;
+				3: result =7'b00000111;
+				4: result =7'b00001111;
+				5: result =7'b00011111;
+				6: result =7'b00111111;
+				7: result =7'b11111111;
 			endcase
 		end
    
