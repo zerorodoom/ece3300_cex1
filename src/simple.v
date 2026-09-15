@@ -20,19 +20,19 @@
 module simple(
 	      input [2:0]  a,
 	      output reg [6:0] result);
-	integer i;
 	always @ (*)
 		begin
-			
-			result = 7'b0000000;
-			a = 3'b000;
-			for(1=3'b001;1<3'b111;i=i+1)
-				begin
-					a = i;
-					result[7-i] = 1'b1;
-				end
+			case(a)
+				0: result =7b'00000000;
+				1: result =7b'00000001;
+				2: result =7b'00000011;
+				3: result =7b'00000111;
+				4: result =7b'00001111;
+				5: result =7b'00011111;
+				6: result =7b'00111111;
+				7: result =7b'11111111;
+			endcase
 		end
-
    
 endmodule
 
