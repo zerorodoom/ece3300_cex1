@@ -27,7 +27,7 @@ module simple(
 			result = 7'b0000000;
 			for(a=3'b001;a<3'b111;a=a+1)
 				begin
-					result[6-i] = 1'b1;
+					result[7-a] = 1'b1;
 				end
 		end
 
