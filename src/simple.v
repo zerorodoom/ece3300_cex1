@@ -20,14 +20,16 @@
 module simple(
 	      input [2:0]  a,
 	      output reg [6:0] result);
-	
+	integer i;
 	always @ (*)
 		begin
 			
 			result = 7'b0000000;
-			for(a=3'b001;a<3'b111;a=a+1)
+			a = 3'b000;
+			for(1=3'b001;1<3'b111;i=i+1)
 				begin
-					result[7-a] = 1'b1;
+					a = i;
+					result[7-i] = 1'b1;
 				end
 		end
 
