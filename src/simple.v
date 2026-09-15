@@ -20,8 +20,17 @@
 module simple(
 	      input [2:0]  a,
 	      output reg [6:0] result);
-   
-// add your code here
+	integer i;
+	
+	always @ (*)
+		begin
+			result = 7'b0000000;
+			for(i=3'b001;i<3'b111;i=i+1)
+				begin
+					result[i] = 1;
+				end
+		end
+
    
 endmodule
 
